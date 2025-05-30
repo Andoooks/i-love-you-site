@@ -26,15 +26,18 @@ export default function Home() {
         rotate: 0
       }}
       animate={{
-        opacity: 1,
+        opacity: [0, 1, 0],
         top: `${Math.random() * 100}%`,
         left: `${Math.random() * 100}%`,
-        scale: 1 + Math.random(),
+        scale: [1, 1.5, 1],
         rotate: Math.random() * 360
       }}
       transition={{
-        duration: 2 + Math.random() * 2,
-        ease: 'easeOut'
+        duration: 3 + Math.random() * 2,
+        ease: 'easeInOut',
+        repeat: Infinity,
+        repeatType: 'loop',
+        delay: Math.random() * 2
       }}
       style={{ color: 'pink' }}
     >
